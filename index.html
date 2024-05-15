@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HypeBridge - Unleash Your Brand's Potential</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Poppins:700');
+
+        html {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FFB1A4;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: white;
+            margin: 0;
+            font-size: 10vmin;
+            line-height: 1;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 15vmin;
+            }
+        }
+
+        p {
+            font-size: 1.4em;
+            color: white;
+            margin: 20px 0;
+            padding: 10px;
+        }
+
+        .btn {
+            margin-top: 30px;
+            background-color: #ff4d4d;
+            color: white;
+            padding: 0.8em 2em;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #ff3333;
+        }
+
+        .background-image {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translate(-10%, 10%);
+            width: 70%;
+            height: auto;
+            z-index: 1;
+            filter: blur(18px);
+            opacity: 0.7;
+        }
+
+        .blob {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            filter: url(#gooey);
+            animation: blobAnimation 20s infinite;
+        }
+
+        .blob1 {
+            width: 300px;
+            height: 300px;
+            top: 30%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .blob2 {
+            width: 250px;
+            height: 250px;
+            top: 50%;
+            left: 40%;
+            animation-delay: 5s;
+        }
+
+        .blob3 {
+            width: 350px;
+            height: 350px;
+            top: 70%;
+            left: 70%;
+            animation-delay: 10s;
+        }
+
+        @keyframes blobAnimation {
+            0%,
+            100% {
+                border-radius: 40% 60% 60% 40%;
+                transform: translate(0, 0);
+            }
+            25% {
+                border-radius: 60% 40% 60% 40%;
+                transform: translate(10px, -20px);
+            }
+            50% {
+                border-radius: 50% 50% 40% 60%;
+                transform: translate(-10px, 20px);
+            }
+            75% {
+                border-radius: 60% 40% 50% 50%;
+                transform: translate(20px, -10px);
+            }
+        }
+
+        @keyframes moveBackground {
+            0% {
+                transform: translate(-10%, 10%) scale(1);
+            }
+            50% {
+                transform: translate(-5%, 5%) scale(1.05);
+            }
+            100% {
+                transform: translate(-10%, 10%) scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .background-image {
+                width: 140%;
+                transform: translate(-30%, 10%) rotate(-20deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img src="hyperbridge.png" alt="HypeBridge Logo" class="logo">
+    <div class="container">
+        <h1>Unleash Your Brand's Potential</h1>
+        <p>Seamlessly connect with influencers who match your brand's vibe and elevate your presence to new heights.</p>
+        <a href="#" class="btn">Elevate My Brand →</a>
+    </div>
+    <img src="rocket.png" alt="Rocket" class="background-image">
+    <svg width="0" height="0">
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooey" />
+            <feBlend in="SourceGraphic" in2="gooey" operator="atop" />
+        </filter>
+    </svg>
+    <!-- <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div> -->
+</body>
+
+</html>
