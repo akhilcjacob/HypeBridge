@@ -100,76 +100,6 @@
             filter: blur(18px);
             opacity: 0.7;
         }
-
-        .blob {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.3);
-            filter: url(#gooey);
-            animation: blobAnimation 20s infinite;
-        }
-
-        .blob1 {
-            width: 300px;
-            height: 300px;
-            top: 30%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .blob2 {
-            width: 250px;
-            height: 250px;
-            top: 50%;
-            left: 40%;
-            animation-delay: 5s;
-        }
-
-        .blob3 {
-            width: 350px;
-            height: 350px;
-            top: 70%;
-            left: 70%;
-            animation-delay: 10s;
-        }
-
-        @keyframes blobAnimation {
-            0%,
-            100% {
-                border-radius: 40% 60% 60% 40%;
-                transform: translate(0, 0);
-            }
-            25% {
-                border-radius: 60% 40% 60% 40%;
-                transform: translate(10px, -20px);
-            }
-            50% {
-                border-radius: 50% 50% 40% 60%;
-                transform: translate(-10px, 20px);
-            }
-            75% {
-                border-radius: 60% 40% 50% 50%;
-                transform: translate(20px, -10px);
-            }
-        }
-
-        @keyframes moveBackground {
-            0% {
-                transform: translate(-10%, 10%) scale(1);
-            }
-            50% {
-                transform: translate(-5%, 5%) scale(1.05);
-            }
-            100% {
-                transform: translate(-10%, 10%) scale(1);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .background-image {
-                width: 140%;
-                transform: translate(-30%, 10%) rotate(-20deg);
-            }
-        }
     </style>
 </head>
 
@@ -178,19 +108,9 @@
     <div class="container">
         <h1>Unleash Your Brand's Potential</h1>
         <p>Seamlessly connect with influencers who match your brand's vibe and elevate your presence to new heights.</p>
-        <a href="#" class="btn">Elevate My Brand →</a>
+        <a href="mailto:akhil@modrnmagic.app?subject=Connect%20Me%20to%20Influencers&body=Hi%20HypeBridge%20Team%2C%0D%0A%0D%0AI%20am%20interested%20in%20connecting%20with%20influencers%20to%20elevate%20my%20brand.%20Please%20provide%20me%20with%20more%20information%20on%20how%20we%20can%20work%20together.%0D%0A%0D%0AThank%20you%2C%0D%0A[Your%20Name]%0D%0A[Your%20Company%20Name]" class="btn">Elevate My Brand →</a>
     </div>
     <img src="rocket.png" alt="Rocket" class="background-image">
-    <svg width="0" height="0">
-        <filter id="gooey">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooey" />
-            <feBlend in="SourceGraphic" in2="gooey" operator="atop" />
-        </filter>
-    </svg>
-    <!-- <div class="blob blob1"></div>
-    <div class="blob blob2"></div>
-    <div class="blob blob3"></div> -->
 </body>
 
 </html>
