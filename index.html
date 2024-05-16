@@ -19,22 +19,23 @@
             padding: 0;
             width: 100vw;
             height: 100vh;
-            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #FFB1A4;
+            background: white;
             font-family: 'Roboto', sans-serif;
+            overflow: hidden;
         }
 
         .container {
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             text-align: center;
             padding: 40px;
             width: 100%;
+            max-width: 1200px;
             z-index: 2;
         }
 
@@ -48,28 +49,26 @@
         }
 
         h1 {
-            color: white;
+            color: black;
             margin: 0;
-            font-size: 10vmin;
-            line-height: 1;
+            font-size: 4em;
+            line-height: 1.2;
             font-weight: bold;
-            letter-spacing: 2px;
-            margin-top: 30px;
+            letter-spacing: -0.01em;
+            margin-top: 20px;
             font-family: 'Poppins', sans-serif;
-            text-transform: uppercase;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 15vmin;
-            }
         }
 
         p {
-            font-size: 1.4em;
-            color: white;
+            font-size: 1.3em;
+            color: black;
             margin: 20px 0;
-            padding: 10px;
+        }
+
+        .splash {
+            max-width: 50vw;
+            max-height: 40vh;
+            padding: 30px;
         }
 
         .btn {
@@ -83,6 +82,7 @@
             cursor: pointer;
             text-transform: uppercase;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
 
         .btn:hover {
@@ -100,17 +100,29 @@
             filter: blur(18px);
             opacity: 0.7;
         }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <img src="hyperbridge.png" alt="HypeBridge Logo" class="logo">
+    <img src="logo.png" class="logo">
     <div class="container">
+        <img src="splash.png" class="splash">
         <h1>Unleash Your Brand's Potential</h1>
         <p>Seamlessly connect with influencers who match your brand's vibe and elevate your presence to new heights.</p>
-        <a href="mailto:akhil@modrnmagic.app?subject=Connect%20Me%20to%20Influencers&body=Hi%20HypeBridge%20Team%2C%0D%0A%0D%0AI%20am%20interested%20in%20connecting%20with%20influencers%20to%20elevate%20my%20brand.%20Please%20provide%20me%20with%20more%20information%20on%20how%20we%20can%20work%20together.%0D%0A%0D%0AThank%20you%2C%0D%0A[Your%20Name]%0D%0A[Your%20Company%20Name]" class="btn">Elevate My Brand →</a>
+        <a href="mailto:akhil@modrnmagic.app?subject=Connect%20Me%20to%20Influencers&body=Hi%20HypeBridge%20Team%2C%0D%0A%0D%0AI%20am%20interested%20in%20connecting%20with%20influencers%20to%20elevate%20my%20brand.%20Please%20provide%20me%20with%20more%20information%20on%20how%20we%20can%20work%20together.%0D%0A%0D%0AThank%20you%2C%0D%0A[Your%20Name]%0D%0A[Your%20Company%20Name]"
+            class="btn">Elevate My Brand →</a>
     </div>
-    <img src="rocket.png" alt="Rocket" class="background-image">
+    <!-- <img src="rocket.png" alt="Rocket" class="background-image"> -->
 </body>
 
 </html>
