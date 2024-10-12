@@ -6,17 +6,17 @@ const footerData = [
     title: "Important Links",
     items: [
       {
-        title: "Terms & Conditions", href: "/privacy_policy.html"
+        title: "Terms & Conditions", href: "/terms_of_service.html"
       },
       {
-        title: "Privacy Policy", href: "/terms_of_service.html"
+        title: "Privacy Policy", href: "/privacy_policy.html"
       },
     ],
   },
   {
     title: "Company",
     items: [
-      
+
       {
         title: "About Us", href: "/about-us"
       },
@@ -68,7 +68,7 @@ export const Footer = () => {
                 <h3 className="mb-6 text-2xl font-bold text-primaryText">Company</h3>
                 <ul>
                   {footerData[1].items.map((item, index) => (
-                      <li key={`${item.title}-${index}`} className="mb-4">
+                    <li key={`${item.title}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
                         href={item.href}
