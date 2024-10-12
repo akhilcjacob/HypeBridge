@@ -1,6 +1,5 @@
-# Tailcast
-
-Dark themed website template built on AstroJS, designed for fictional startup
+# HypeBridge
+- Testing new design
 
 ## Tech stack:
 
