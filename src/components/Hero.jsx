@@ -74,11 +74,11 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0, zIndex: 20 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="relative w-screen flex justify-center ">
+          <div className="relative w-screen flex justify-center">
             <img
               src={dashboard.src}
               alt="Dashboard image"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl  hero-dashboard-border-gradient lg:top-6 xl:top-0 shadow-xl"
+              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl hero-dashboard-border-gradient lg:top-6 xl:top-0   shadow-2xl"
             />
           </div>
         </motion.div>

@@ -8,7 +8,7 @@ export const FeaturesDiagonal = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="lg:mb-16 w-full flex flex-col justify-center items-center bg-bgDark1">
+    <section className="w-full flex flex-col justify-center items-center bg-bgDark1">
       <div className="shape-divider-bottom-1665696614">
         <svg
           data-name="Layer 1"
@@ -52,7 +52,7 @@ export const FeaturesDiagonal = () => {
             <img
               src={featuresdiagonal.src}
               alt="Feature image"
-              className="rounded-xl  shadow-xl"
+              className="rounded-xl  shadow-2xl"
             />
           </div>
         </div>

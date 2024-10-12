@@ -5,13 +5,25 @@ const footerData = [
   {
     title: "Important Links",
     items: [
-      "Terms & Conditions",
-      "Privacy Policy",
+      {
+        title: "Terms & Conditions", href: "/privacy_policy.html"
+      },
+      {
+        title: "Privacy Policy", href: "/terms_of_service.html"
+      },
     ],
   },
   {
     title: "Company",
-    items: ["About Us", "Jobs", "Press", "Contact Us"],
+    items: [
+      
+      {
+        title: "About Us", href: "/about-us"
+      },
+      {
+        title: "Careers", href: "/careers"
+      },
+    ]
   },
 ];
 
@@ -32,30 +44,6 @@ export const Footer = () => {
                   HypeBridge
                 </div>
               </div>
-
-              {/* <div className="w-36 mx-auto lg:mx-0">
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] outlined-button"
-                  href="#"
-                  aria-label="Facebook"
-                >
-                  <FacebookIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="#"
-                  aria-label="Twitter"
-                >
-                  <TwitterIcon />
-                </a>
-                <a
-                  className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
-                  href="#"
-                  aria-label="Instagram"
-                >
-                  <InstagramIcon />
-                </a>
-              </div> */}
             </div>
             <div className="w-full lg:w-2/3  lg:pl-16 hidden lg:flex flex-wrap justify-between">
               <div className="w-full md:w-1/3 lg:w-auto mb-16 md:mb-0">
@@ -64,13 +52,13 @@ export const Footer = () => {
                 </h3>
                 <ul>
                   {footerData[0].items.map((item, index) => (
-                    <li key={`${item}-${index}`} className="mb-4">
+                    <li key={`${item.title}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label={item}
+                        href={item.href}
+                        aria-label={item.title}
                       >
-                        {item}
+                        {item.title}
                       </a>
                     </li>
                   ))}
@@ -80,13 +68,13 @@ export const Footer = () => {
                 <h3 className="mb-6 text-2xl font-bold text-primaryText">Company</h3>
                 <ul>
                   {footerData[1].items.map((item, index) => (
-                    <li key={`${item}-${index}`} className="mb-4">
+                      <li key={`${item.title}-${index}`} className="mb-4">
                       <a
                         className="text-gray-400 hover:text-gray-300"
-                        href="#"
-                        aria-label={item}
+                        href={item.href}
+                        aria-label={item.title}
                       >
-                        {item}
+                        {item.title}
                       </a>
                     </li>
                   ))}

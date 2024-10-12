@@ -1,0 +1,10 @@
+---
+import AboutUs from '../../components/AboutUs.jsx';
+import { Navbar } from '../../components/Navbar';
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="About Us">
+  <Navbar client:load />
+  <AboutUs />
+</Layout>
