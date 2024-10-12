@@ -3,10 +3,12 @@ import { useState } from "react";
 
 
 import dashboard from "../assets/images/dashboard.jpg";
+import { DemoModal } from "./DemoModal";
 import { InvitationModal } from "./InvitationModal";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
   return (
     <section
@@ -60,7 +62,7 @@ export const Hero = () => {
             </button>
             <button
               className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid  flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsDemoModalOpen(true)}
               aria-label="Product demo"
             >
               Product demo
@@ -98,8 +100,14 @@ export const Hero = () => {
         </div>
       </div>
       {isModalOpen && (
-        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
-      )}
+        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen}
+         />
+      )},
+
+{isDemoModalOpen && (
+        <DemoModal isOpen={isDemoModalOpen} setIsOpen={setIsDemoModalOpen}
+         />
+      )},
     </section>
   );
 };
