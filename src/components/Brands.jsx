@@ -27,19 +27,19 @@ export const Brands = () => (
           <div className="w-2/3 sm:w-[620px] lg:w-1/2 mx-auto lg:mx-0 lg:pl-10">
             <div className="flex flex-wrap -m-4">
 
-            <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center hover:shadow-2xl">
+              <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center ">
                 <NooklyLogo />
                 <span className="mt-2 text-lg font-bold text-[rgb(174,178,183)]">
                   Nookly
                 </span>
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center hover:shadow-2xl">
+              <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center ">
                 <DepartureRisk />
                 <span className="mt-2 text-lg font-bold text-[rgb(174,178,183)]">
                   Departure Risk
                 </span>
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center hover:shadow-2xl">
+              <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center ">
                 <SaltedShores />
                 <span className="mt-2 text-lg font-bold text-[rgb(174,178,183)]">
                   Salted Shores Co.

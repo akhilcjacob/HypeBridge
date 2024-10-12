@@ -1,27 +1,23 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-
 import { HypeBridgeLogo } from "../assets/logos/HypeBridgeLogo";
 
 const navbarLinks = [
   { label: "Home", href: "/#home", ariaLabel: "Home" },
   { label: "Features", href: "/#features", ariaLabel: "Features" },
-  // { label: "Pricing", href: "/#pricing", ariaLabel: "Pricing" },
-  // { label: "testimonials", href: "/#testimonials", ariaLabel: "testimonials" },
   { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
-  { label: "About", href: "/#footer", ariaLabel: "about" },
+  { label: "About", href: "/#footer", ariaLabel: "About" },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav
-      className="w-full h-20 flex flex-col justify-center items-center fixed bg-bgDark1 lg:bg-bgDarkTransparent z-40 lg:backdrop-blur-xl"
-      aria-label="Main navigation"
-    >
-      <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex items-center relative">
+    <nav className="w-full h-20 flex flex-col justify-center items-center fixed z-40">
+      {/* Background Blur Layer */}
+      <div className="absolute inset-0 bg-bgDarkTransparent backdrop-blur-xl z-[-1]"></div>
 
+      <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex items-center relative">
         {/* Center Logo */}
         <motion.div
           className="absolute left-1/2 transform -translate-x-1/2"
@@ -31,7 +27,7 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <a href="/#home" aria-label="Home">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center ml-5">
               <div className="text-white mr-2 text-6xl">
                 <HypeBridgeLogo />
               </div>
@@ -39,8 +35,7 @@ export const Navbar = () => {
           </a>
         </motion.div>
 
-
-        {/* Right Links */}
+        {/* Right Links (Desktop) */}
         <motion.div
           className="hidden lg:flex grow justify-end"
           initial={{ opacity: 0 }}
@@ -51,7 +46,7 @@ export const Navbar = () => {
           <div className="h-full pl-12 pb-2 flex">
             {navbarLinks.map(({ href, label, ariaLabel }) => (
               <a
-                className="text-white lg:text-base text-2xl leading-6  ml-4 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2"
+                className="text-white lg:text-base text-2xl leading-6 ml-4 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2"
                 href={href}
                 aria-label={ariaLabel}
                 key={label}
@@ -72,7 +67,28 @@ export const Navbar = () => {
           <div className="w-5 h-0.5 bg-gray-500"></div>
         </div>
       </div>
-      {/* Mobile navbar */}
+
+      {/* Mobile Navbar with Blur */}
+      {isOpen && (
+        <motion.div
+          className="lg:hidden w-full bg-bgDark2/80 flex flex-col items-center py-6 space-y-4 absolute top-20 left-0 z-30 backdrop-blur-xl"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+        >
+          {navbarLinks.map(({ href, label, ariaLabel }) => (
+            <a
+              className="text-white text-xl font-medium hover:scale-110 transition"
+              href={href}
+              aria-label={ariaLabel}
+              key={label}
+              onClick={() => setIsOpen(false)} // Close the menu on click
+            >
+              {label}
+            </a>
+          ))}
+        </motion.div>
+      )}
     </nav>
   );
 };
