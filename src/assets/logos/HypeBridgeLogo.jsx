@@ -2,9 +2,6 @@ export const HypeBridgeLogo = () => (
   <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
     width="75.000000pt" height="75.000000pt" viewBox="0 0 900.000000 900.000000"
     preserveAspectRatio="xMidYMid meet">
-    <metadata>
-      Created by potrace 1.10, written by Peter Selinger 2001-2011
-    </metadata>
     <g transform="translate(0.000000,900.000000) scale(0.100000,-0.100000)"
       fill="#ffffff" stroke="none">
       <path d="M8050 7921 c0 -52 43 -61 50 -11 5 31 -1 40 -25 40 -21 0 -25 -5 -25

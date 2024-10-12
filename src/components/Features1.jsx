@@ -51,7 +51,7 @@ export const Features1 = () => {
                 <img
                   src={feature1.src}
                   alt="Feature image 1"
-                  className="rounded-xl  main-border-gray mx-auto sm:mx-unset"
+                  className="rounded-xl  shadow-xl mx-auto sm:mx-unset"
                   aria-label="Feature image 1"
                 />
               </div>
@@ -59,7 +59,7 @@ export const Features1 = () => {
                 <img
                   src={feature2.src}
                   alt="Feature image 2"
-                  className="rounded-xl  main-border-gray mx-auto sm:mx-unset"
+                  className="rounded-xl  shadow-xl mx-auto sm:mx-unset"
                   aria-label="Feature image 2"
                 />
               </div>
@@ -68,8 +68,8 @@ export const Features1 = () => {
               <div className="mb-4 py-3 pl-3 pr-2 rounded-lg ">
                 <img
                   src={feature3.src}
-                  alt="Feature image 3"
-                  className="rounded-xl  main-border-gray"
+                  alt="Feature  image 3"
+                  className="rounded-xl  shadow-xl"
                   aria-label="Feature image 3"
                 />
               </div>
@@ -77,7 +77,7 @@ export const Features1 = () => {
                 <img
                   src={feature4.src}
                   alt="Feature image 4"
-                  className="rounded-xl  main-border-gray"
+                  className="rounded-xl  shadow-xl"
                   aria-label="Feature image 4"
                 />
               </div>

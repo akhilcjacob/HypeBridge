@@ -50,7 +50,7 @@ export const InvitationModal = ({ setIsOpen }) => (
                   <HypeBridgeLogo />
                 </div>
                 <div className="text-white font-['Inter'] font-bold text-3xl">
-                  Tailcast
+                  HypeBridge
                 </div>
               </div>
 
