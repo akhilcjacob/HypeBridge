@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HypeBridgeLogo } from "../assets/logos/HypeBridgeLogo";
 
 const navbarLinks = [
@@ -11,6 +11,34 @@ const navbarLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const mobileMenuRef = useRef(null); // Ref for the mobile menu
+  const toggleButtonRef = useRef(null); // Ref for the toggle button
+
+  // Close the menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Check if the click is outside the mobile menu and toggle button
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target) &&
+        !toggleButtonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    // Attach the event listener only if the menu is open
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <nav className="w-full h-20 flex flex-col justify-center items-center fixed z-40">
@@ -59,6 +87,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu Toggle */}
         <div
+          ref={toggleButtonRef}
           className="lg:hidden flex flex-col px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-bgDark2"
           onClick={() => setIsOpen(!isOpen)}
         >
@@ -71,6 +100,7 @@ export const Navbar = () => {
       {/* Mobile Navbar with Blur */}
       {isOpen && (
         <motion.div
+          ref={mobileMenuRef} // Attach the ref to the mobile menu
           className="lg:hidden w-full bg-bgDark2/80 flex flex-col items-center py-6 space-y-4 absolute top-20 left-0 z-30 backdrop-blur-xl"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -82,7 +112,7 @@ export const Navbar = () => {
               href={href}
               aria-label={ariaLabel}
               key={label}
-              onClick={() => setIsOpen(false)} // Close the menu on click
+              onClick={() => setIsOpen(false)} // Close the menu on link click
             >
               {label}
             </a>
