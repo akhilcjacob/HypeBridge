@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
+import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import feature1 from "../assets/images/feature1.jpg";
 import feature2 from "../assets/images/feature2.jpg";
 import feature3 from "../assets/images/feature3.jpg";
 import feature4 from "../assets/images/feature4.jpg";
-import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 
 export const Features1 = () => {
   return (
@@ -23,25 +23,24 @@ export const Features1 = () => {
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="block-subtitle">Embrace Innovation</span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                Unlike any tool you used before
+                Unlike any other marketing platform
               </h2>
               <p className="mb-10 text-secondaryText leading-loose">
-                Discover a new level of data analysis with our innovative and
-                user-friendly platform. Transform your business needs with
-                actionable insights.
+                Discover the next generation of influencer search with our innovative and
+                user-friendly platform. 
               </p>
               <ul className="mb-6 text-primaryText">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Real-time data visualization</span>
+                  <span>Campaign based influencer targeting</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Advanced predictive analytics</span>
+                  <span>Natural language AI Powered Search</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Seamless integration with APIs</span>
+                  <span>Multi-Platform Influencer search</span>
                 </li>
               </ul>
             </div>

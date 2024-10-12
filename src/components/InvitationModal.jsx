@@ -26,21 +26,21 @@ export const InvitationModal = ({ setIsOpen }) => (
                 Subscribe Now
               </h2>
               <h2 className="text-5xl font-bold tracking-normal text-secondaryColor">
-                Winter is coming
+                Launch is coming!
               </h2>
 
               <ul className="mb-6 text-primaryText mt-12">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Vestibulum viverra</span>
+                  <span>Be in the know</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Morbi mollis metus pretium</span>
+                  <span>Exclusive Updates</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Etiam lectus nunc, commodo</span>
+                  <span>Potential Beta Tester</span>
                 </li>
               </ul>
             </div>
@@ -70,6 +70,7 @@ export const InvitationModal = ({ setIsOpen }) => (
                   <button
                     className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
                     type="button"
+                    onClick={() => window.location = 'mailto:akhil@thehypebridge.com'}
                     aria-label="Join now"
                   >
                     Join Now

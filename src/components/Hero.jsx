@@ -63,9 +63,9 @@ export const Hero = () => {
             <button
               className="w-64 sm:w-52 h-12 rounded-xl font-bold text-primaryText border border-solid  flex justify-center items-center cursor-pointer bg-bgDark2 hover:bg-bgDark3 border-primaryColor transition"
               onClick={() => setIsDemoModalOpen(true)}
-              aria-label="Product demo"
+              aria-label="Watch demo"
             >
-              Product demo
+              Watch demo
             </button>
           </div>
         </motion.div>
@@ -78,7 +78,7 @@ export const Hero = () => {
             <img
               src={dashboard.src}
               alt="Dashboard image"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl  hero-dashboard-border-gradient lg:top-6 xl:top-0 shadow-xl"
             />
           </div>
         </motion.div>

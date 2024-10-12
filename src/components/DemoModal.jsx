@@ -20,7 +20,7 @@ export const DemoModal = ({ setIsOpen }) => (
         >
           <div className="flex relative">
             <div className="w-1/2 hidden lg:inline">
-              <iframe className='video'
+              <iframe className='video w-full h-full items-center justify-center rounded-lg'
                 title='Youtube player'
                 sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
                 src={`https://youtube.com/embed/i7b40NSj62s?autoplay=0`}>
@@ -33,7 +33,6 @@ export const DemoModal = ({ setIsOpen }) => (
                   <HypeBridgeLogo />
                 </div>
                 <div className="text-white font-['Inter'] font-bold text-3xl">
-                  Tailcast
                 </div>
               </div>
 
@@ -52,6 +51,7 @@ export const DemoModal = ({ setIsOpen }) => (
                 <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
                   <button
                     className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
+                    onClick={() => window.location = 'mailto:akhil@thehypebridge.com'}
                     type="button"
                     aria-label="Join now"
                   >
