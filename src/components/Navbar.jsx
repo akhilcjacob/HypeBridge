@@ -88,7 +88,7 @@ export const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <div
           ref={toggleButtonRef}
-          className="lg:hidden flex flex-col px-2 py-3 border-solid border border-gray-600 rounded-md cursor-pointer hover:bg-bgDark2"
+          className="lg:hidden flex flex-col px-2 py-3  rounded-md cursor-pointer hover:bg-bgDark2"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="w-5 h-0.5 bg-gray-500 mb-1"></div>
