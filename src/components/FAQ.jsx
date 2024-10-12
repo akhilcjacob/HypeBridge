@@ -1,28 +1,39 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const FAQData = [
   {
-    question: "Can I upgrade or downgrade my plan at any time?",
+    question: "How does HypeBridge find the perfect influencer for my brand?",
     answer:
-      "Yes, you can easily upgrade or downgrade your plan at any time. Simply navigate to the account settings in your dashboard and choose the desired plan. The changes will be reflected immediately, and any adjustments in pricing will be applied on your next billing cycle. Our support team is more than happy to provide guidance and recommendations.",
+      "HypeBridge uses cutting-edge AI to analyze your brand’s style, audience, and goals, matching you with influencers who align seamlessly. No more manual searching—our system sifts through thousands of niche creators to deliver those with the highest engagement potential, ensuring every partnership feels natural and impactful.",
   },
   {
-    question: "How to claim your 25% discount offer?",
+    question: "What makes HypeBridge’s AI-driven matching so powerful?",
     answer:
-      "To claim your 25% discount, simply sign up for an account and enter the promotional code at checkout. The discount will be applied automatically to your purchase.",
+      "Our AI doesn’t just look at follower count. It analyzes influencer content, engagement patterns, audience demographics, and brand affinity to recommend creators who resonate with your target market. This means more authentic connections, higher engagement rates, and a streamlined process that gets results faster.",
   },
   {
-    question: "What's your refund policy?",
+    question: "Can I track campaign performance in real time?",
     answer:
-      "We offer a 30-day money-back guarantee on all our plans. If you're not satisfied with our product, simply contact our support team within 30 days of purchase for a full refund.",
+      "Yes! With HypeBridge, you get access to live analytics dashboards that track everything from reach and impressions to engagement rates and ROI. See which influencers are driving the best results and adjust your strategy on the fly to maximize your impact.",
   },
   {
-    question: "How to get support for the product?",
+    question: "How does the bidding system benefit my campaign?",
     answer:
-      "Our dedicated support team is here to help. You can reach out to us through the contact form on our website, send an email, or engage with us via live chat. We'll be happy to assist you with any questions or concerns you may have",
+      "Our bid-based platform lets you set your budget and bid on the influencers who match your brand best. This ensures you only pay for creators that align perfectly with your goals, helping you control costs while securing top talent that delivers the highest return on investment.",
+  },
+  {
+    question: "Is HypeBridge suitable for small businesses or only large brands?",
+    answer:
+      "HypeBridge is built for businesses of all sizes! Whether you're a startup looking to work with micro-influencers or an established brand targeting larger creators, our platform scales to fit your needs. With access to influencers across all tiers, you can find the perfect match for your budget and campaign goals.",
+  },
+  {
+    question: "What kind of insights can I expect from the platform?",
+    answer:
+      "Beyond basic metrics, HypeBridge provides in-depth insights on audience sentiment, influencer effectiveness, and content performance. Our advanced analytics help you understand what’s working, what’s not, and how to optimize your campaigns for maximum impact. Make every decision with confidence, backed by data.",
   },
 ];
+
 
 export const FAQ = () => (
   <section className="relative -mt-8 sm:mt-0 pt-12 sm:pt-16 pb-16 bg-blueGray-50 overflow-hidden">

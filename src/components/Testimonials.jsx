@@ -7,25 +7,23 @@ import testimonial3 from "../assets/images/testimonial3.png";
 
 const testimonialsData = [
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    customerName: "Logan A.",
+    customerTitle: "Founder",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial1,
+      "HypeBridge has transformed our influencer marketing strategy, helping us streamline the process and make smarter, data-driven decisions. The AI-driven platform is user-friendly, and the insights we've gained have led to more effective partnerships and measurable results.", image: testimonial1,
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    customerName: "Tessa C.",
+    customerTitle: "Founder",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "The AI-powered tools from HypeBridge have streamlined our influencer marketing efforts, enabling us to make data-driven decisions that boost efficiency. It's been a game-changer for our brand. The platform is intuitive, and the valuable insights we've gained have led to noticeable improvements.",
     image: testimonial2,
   },
   {
-    customerName: "John Watkins",
-    customerTitle: "Founder of Dashflow",
+    customerName: "John B.",
+    customerTitle: "Founder",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
-    image: testimonial3,
+      "HypeBridge's advanced analytics have streamlined our workflow and empowered us to make data-driven decisions that enhance efficiency. This platform has been a game-changer for our business. It's user-friendly, and the insights we've gained have led to significant improvements.", image: testimonial3,
   },
 ];
 

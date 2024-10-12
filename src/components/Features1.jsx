@@ -23,7 +23,7 @@ export const Features1 = () => {
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="block-subtitle">Embrace Innovation</span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                Unlike any other marketing platform
+                Unlike any other influencer discovery platform
               </h2>
               <p className="mb-10 text-secondaryText leading-loose">
                 Discover the next generation of influencer search with our innovative and

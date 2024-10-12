@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
 
-import { AmazonLogo } from "../assets/logos/AmazonLogo";
-import { DropboxLogo } from "../assets/logos/DropboxLogo";
-import { NetflixLogo } from "../assets/logos/NetflixLogo";
-import { SlackLogo } from "../assets/logos/SlackLogo";
-import { SpotifyLogo } from "../assets/logos/SpotifyLogo";
-import { StripeLogo } from "../assets/logos/StripeLogo";
+import { DepartureRisk } from "../assets/logos/DepartureRisk";
+import { NooklyLogo } from "../assets/logos/NooklyLogo";
+import { SaltedShores } from "../assets/logos/SaltedShores";
 
 export const Brands = () => (
   <section className="py-12 sm:py-24 bg-bgDark1 w-full  lg:mt-16 mb-8 lg:mb-16">
@@ -29,16 +26,26 @@ export const Brands = () => (
           </div>
           <div className="w-2/3 sm:w-[620px] lg:w-1/2 mx-auto lg:mx-0 lg:pl-10">
             <div className="flex flex-wrap -m-4">
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
-                <AmazonLogo />
+
+            <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center">
+                <NooklyLogo />
+                <span className="mt-2 text-lg font-bold text-[rgb(174,178,183)]">
+                  Nookly
+                </span>
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <DropboxLogo />
+              <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center">
+                <DepartureRisk />
+                <span className="mt-2 text-lg font-bold text-[rgb(174,178,183)]">
+                  Departure Risk
+                </span>
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex  justify-center">
-                <NetflixLogo />
+              <div className="w-1/2 sm:w-1/3 py-6 flex flex-col justify-center items-center">
+                <SaltedShores />
+                <span className="mt-2 text-lg font-bold text-[rgb(174,178,183)]">
+                  Salted Shores Co.
+                </span>
               </div>
-              <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
+              {/* <div className="w-1/2 sm:w-1/3 py-6 flex justify-center">
                 <StripeLogo />
               </div>
 
@@ -46,8 +53,8 @@ export const Brands = () => (
                 <SpotifyLogo />
               </div>
               <div className="w-1/2 sm:w-1/3  py-6 flex  justify-center">
-                <SlackLogo />
-              </div>
+                <SlackLogo /> */}
+              {/* </div> */}
             </div>
           </div>
         </div>

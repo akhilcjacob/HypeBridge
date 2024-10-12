@@ -59,23 +59,34 @@ export const InvitationModal = ({ setIsOpen }) => (
               </h3>
               <div className="flex flex-wrap -m-2">
                 <div className="w-full sm:w-4/5 p-2 mx-auto">
-                  <input
-                    className="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
-                    id="newsletterInput3-1"
-                    type="text"
-                    placeholder="Your email address"
-                  />
+
                 </div>
-                <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
-                  <button
-                    className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
-                    type="button"
-                    onClick={() => window.location = 'mailto:akhil@thehypebridge.com'}
-                    aria-label="Join now"
-                  >
-                    Join Now
-                  </button>
-                </div>
+                <form
+                  action="https://formspree.io/f/xovqqvra"
+                  method="POST"
+                  enctype="multipart/form-data"
+                  class="w-4/5"
+                >
+                  <label>
+                    <input
+                      className="px-4 py-4 w-full text-gray-500 font-medium text-center placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"
+                      id="newsletterInput3-1"
+                      placeholder="Your email address"
+                      type="email"
+                      name="email"
+                    />
+                  </label>
+                  <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
+                    <button
+                      className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-primaryColor hover:bg-[#7274f3] transition ease-in-out duration-200"
+                      type="submit"
+                      aria-label="Join now"
+                    >
+                      Join Now
+                    </button>
+                  </div>
+                </form>
+
               </div>
             </div>
             <div
