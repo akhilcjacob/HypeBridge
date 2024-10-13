@@ -15,6 +15,7 @@ module.exports = {
         bgDarkTransparent: "rgb(31, 32, 35, 0.7)",
         bgDarkTransparentDarker: "rgb(0,0,0,0.5)",
         bgDarkTransparentLighter: "rgb(48, 49, 54, 0.7)",
+        bgDarkSemiTransparentLighter: "rgb(48, 49, 54, 1)",
         mainBorder: "rgb(255,255,255,0.15)",
         mainBorderDarker: "rgb(255,255,255,0.07)",
         quoteIconColor: "rgb(178, 184, 205)"

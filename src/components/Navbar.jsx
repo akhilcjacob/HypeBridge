@@ -101,7 +101,7 @@ export const Navbar = () => {
       {isOpen && (
         <motion.div
           ref={mobileMenuRef} // Attach the ref to the mobile menu
-          className="lg:hidden w-full bg-bgDarkTransparentLighter flex flex-col items-center py-6 space-y-4 absolute top-20 left-0 z-22 backdrop-blur-3xl rounded-3xl mt-10 z-22"
+          className="lg:hidden w-full bg-bgDarkSemiTransparentLighter flex flex-col items-center py-6 space-y-4 absolute top-20 left-0 z-22 backdrop-blur-3xl rounded-3xl mt-10 z-22"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
