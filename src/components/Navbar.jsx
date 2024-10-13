@@ -41,14 +41,14 @@ export const Navbar = () => {
   }, [isOpen]);
 
   return (
-    <nav className="w-full h-20 flex flex-col justify-center items-center fixed z-40">
+    <nav className="w-4/5 h-50 p-4 flex flex-col justify-center items-center fixed top-5 left-1/2 transform -translate-x-1/2 z-40 rounded-full bg-bgDarkTransparentLighter backdrop-blur-xl shadow-2xl">
       {/* Background Blur Layer */}
-      <div className="absolute inset-0 bg-bgDarkTransparent backdrop-blur-xl z-[-1]"></div>
+      <div className="absolute inset-0 z-[-1] rounded-full"></div>
 
-      <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex items-center relative">
+      <div className="flex items-center justify-between w-full">
         {/* Center Logo */}
         <motion.div
-          className="absolute left-1/2 transform -translate-x-1/2"
+          className="mr-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -65,7 +65,7 @@ export const Navbar = () => {
 
         {/* Right Links (Desktop) */}
         <motion.div
-          className="hidden lg:flex grow justify-end"
+          className="hidden lg:flex grow justify-end pr-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
@@ -88,7 +88,7 @@ export const Navbar = () => {
         {/* Mobile Menu Toggle */}
         <div
           ref={toggleButtonRef}
-          className="lg:hidden flex flex-col px-2 py-3  rounded-md cursor-pointer hover:bg-bgDark2"
+          className="lg:hidden flex flex-col px-2 py-3 rounded-md cursor-pointer hover:bg-bgDark2"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="w-5 h-0.5 bg-gray-500 mb-1"></div>
@@ -101,24 +101,26 @@ export const Navbar = () => {
       {isOpen && (
         <motion.div
           ref={mobileMenuRef} // Attach the ref to the mobile menu
-          className="lg:hidden w-full bg-bgDark2/80 flex flex-col items-center py-6 space-y-4 absolute top-20 left-0 z-30 backdrop-blur-xl"
+          className="lg:hidden w-full bg-bgDarkTransparentLighter flex flex-col items-center py-6 space-y-4 absolute top-20 left-0 z-22 backdrop-blur-3xl rounded-3xl mt-10 z-22"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
         >
-          {navbarLinks.map(({ href, label, ariaLabel }) => (
-            <a
-              className="text-white text-xl font-medium hover:scale-110 transition"
-              href={href}
-              aria-label={ariaLabel}
-              key={label}
-              onClick={() => setIsOpen(false)} // Close the menu on link click
-            >
-              {label}
-            </a>
-          ))}
+
+            {navbarLinks.map(({ href, label, ariaLabel }) => (
+              <a
+                className="text-white text-xl font-medium hover:scale-110 transition pl-10 pr-10"
+                href={href}
+                aria-label={ariaLabel}
+                key={label}
+                onClick={() => setIsOpen(false)} // Close the menu on link click
+              >
+                {label}
+              </a>
+            ))}
         </motion.div>
       )}
+
     </nav>
   );
 };

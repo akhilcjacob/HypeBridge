@@ -41,3 +41,9 @@
 @font-face {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
+
+
+/* Prevent overscroll/bounce at the top and bottom of the page */
+html, body {
+  overscroll-behavior: none;
+}
