@@ -44,7 +44,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h2 className="text-secondaryText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-50 ">
-          HypeBridge eliminates the inefficiencies in influencer marketing by leveraging AI-driven matching and a bid-based platform
+          Next generation influencer search engine to discover creators perfectly match your brands style
           </h2>
         </motion.div>
         <motion.div
