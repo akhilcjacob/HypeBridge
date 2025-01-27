@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { HypeBridgeLogo } from "../assets/logos/HypeBridgeLogo";
 
 const navbarLinks = [
-  { label: "Home", href: "/#home", ariaLabel: "Home" },
   { label: "Features", href: "/#features", ariaLabel: "Features" },
   { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
   { label: "About", href: "/#footer", ariaLabel: "About" },
@@ -11,6 +10,7 @@ const navbarLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const mobileMenuRef = useRef(null); // Ref for the mobile menu
   const toggleButtonRef = useRef(null); // Ref for the toggle button
 
@@ -65,13 +65,13 @@ export const Navbar = () => {
 
         {/* Right Links (Desktop) */}
         <motion.div
-          className="hidden lg:flex grow justify-end pr-5"
+          className="hidden lg:flex grow justify-end items-center pr-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <div className="h-full pl-12 pb-2 flex">
+          <div className="h-full pl-12 pb-2 flex items-center">
             {navbarLinks.map(({ href, label, ariaLabel }) => (
               <a
                 className="text-white lg:text-base text-2xl leading-6 ml-4 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2"
@@ -82,6 +82,13 @@ export const Navbar = () => {
                 {label}
               </a>
             ))}
+            <button
+              onClick={() => setIsDemoModalOpen(true)}
+              className="ml-8 px-6 py-2 bg-gradient-to-r from-primaryColor to-secondaryColor text-white font-bold rounded-lg hover:scale-105 transition"
+              aria-label="Get Early Access"
+            >
+              Get Early Access
+            </button>
           </div>
         </motion.div>
 
@@ -100,27 +107,38 @@ export const Navbar = () => {
       {/* Mobile Navbar with Blur */}
       {isOpen && (
         <motion.div
-          ref={mobileMenuRef} // Attach the ref to the mobile menu
-          className="lg:hidden w-full bg-bgDarkSemiTransparentLighter flex flex-col items-center py-6 space-y-4 absolute top-20 left-0 z-22 backdrop-blur-3xl rounded-3xl mt-10 z-22"
-          initial={{ opacity: 0, y: -20 }}
+          ref={mobileMenuRef}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.2 }}
+          className="lg:hidden absolute top-full left-0 w-full mt-4 py-4 bg-bgDarkTransparentLighter backdrop-blur-xl rounded-3xl shadow-xl"
         >
-
+          <div className="flex flex-col items-center space-y-4">
             {navbarLinks.map(({ href, label, ariaLabel }) => (
               <a
-                className="text-white text-xl font-medium hover:scale-110 transition pl-10 pr-10"
+                key={label}
                 href={href}
                 aria-label={ariaLabel}
-                key={label}
-                onClick={() => setIsOpen(false)} // Close the menu on link click
+                className="text-white text-lg font-medium hover:text-primaryColor transition"
+                onClick={() => setIsOpen(false)}
               >
                 {label}
               </a>
             ))}
+            <button
+              onClick={() => {
+                setIsDemoModalOpen(true);
+                setIsOpen(false);
+              }}
+              className="mt-4 px-6 py-2 bg-gradient-to-r from-primaryColor to-secondaryColor text-white font-bold rounded-lg hover:scale-105 transition"
+              aria-label="Get Early Access"
+            >
+              Get Early Access
+            </button>
+          </div>
         </motion.div>
       )}
-
     </nav>
   );
 };

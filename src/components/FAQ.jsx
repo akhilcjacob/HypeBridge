@@ -3,37 +3,36 @@ import { useState } from "react";
 
 const FAQData = [
   {
-    question: "How does HypeBridge find the perfect influencer for my brand?",
+    question: "How does your AI actually find influencers?",
     answer:
-      "HypeBridge uses cutting-edge AI to analyze your brand’s style, audience, and goals, matching you with influencers who align seamlessly. No more manual searching—our system sifts through thousands of niche creators to deliver those with the highest engagement potential, ensuring every partnership feels natural and impactful.",
+      "Our AI analyzes millions of creators in seconds to find your perfect matches. No BS filters - we look at content style, audience engagement, and brand fit to find influencers who'll actually move the needle for you.",
   },
   {
-    question: "What makes HypeBridge’s AI-driven matching so powerful?",
+    question: "What makes your AI better than manual search?",
     answer:
-      "Our AI doesn’t just look at follower count. It analyzes influencer content, engagement patterns, audience demographics, and brand affinity to recommend creators who resonate with your target market. This means more authentic connections, higher engagement rates, and a streamlined process that gets results faster.",
+      "Speed and accuracy. While you're reading this, our AI has already analyzed thousands of influencers' content, engagement rates, and audience data. Try doing that with a spreadsheet.",
   },
   {
-    question: "Can I track campaign performance in real time?",
+    question: "Can I see results in real-time?",
     answer:
-      "Yes! With HypeBridge, you get access to live analytics dashboards that track everything from reach and impressions to engagement rates and ROI. See which influencers are driving the best results and adjust your strategy on the fly to maximize your impact.",
+      "Every click, view, and conversion - tracked instantly. Our dashboard shows you exactly what's working, who's delivering, and where your money's best spent. No more end-of-campaign surprises.",
   },
   {
-    question: "How does the bidding system benefit my campaign?",
+    question: "How does your pricing work?",
     answer:
-      "Our bid-based platform lets you set your budget and bid on the influencers who match your brand best. This ensures you only pay for creators that align perfectly with your goals, helping you control costs while securing top talent that delivers the highest return on investment.",
+      "You only pay for what works. Our platform lets you set your budget and bid on influencers who match your brand. No wasted spend on creators who don't deliver.",
   },
   {
-    question: "Is HypeBridge suitable for small businesses or only large brands?",
+    question: "Is this only for big brands?",
     answer:
-      "HypeBridge is built for businesses of all sizes! Whether you're a startup looking to work with micro-influencers or an established brand targeting larger creators, our platform scales to fit your needs. With access to influencers across all tiers, you can find the perfect match for your budget and campaign goals.",
+      "Whether you're dropping your first product or running a Fortune 500 brand, we scale with you. From micro-influencers to mega-stars, find the perfect fit for your budget.",
   },
   {
-    question: "What kind of insights can I expect from the platform?",
+    question: "What kind of stats do I get?",
     answer:
-      "Beyond basic metrics, HypeBridge provides in-depth insights on audience sentiment, influencer effectiveness, and content performance. Our advanced analytics help you understand what’s working, what’s not, and how to optimize your campaigns for maximum impact. Make every decision with confidence, backed by data.",
+      "Everything that matters. Engagement rates, audience sentiment, ROI metrics - all in real-time. No vanity metrics, just data that helps you make money.",
   },
 ];
-
 
 export const FAQ = () => (
   <section className="relative -mt-8 sm:mt-0 pt-12 sm:pt-16 pb-16 bg-blueGray-50 overflow-hidden">

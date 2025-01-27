@@ -1,0 +1,27 @@
+---
+import { Brands } from '../components/Brands.jsx'
+import { FAQ } from '../components/FAQ.jsx'
+import { AIFeatures1 } from '../components/AIFeatures1.jsx'
+import { AIFeaturesDiagonal } from '../components/AIFeaturesDiagonal.jsx'
+import { Footer } from '../components/Footer.jsx'
+import { AIHero } from '../components/AIHero.jsx'
+import { Navbar } from '../components/Navbar.jsx'
+import { ScrollUpButton } from '../components/ScrollUpButton'
+import Layout from '../layouts/Layout.astro'
+import '../styles/Diagonals.css'
+import '../styles/Theme.css'
+---
+
+<Layout
+  title="HypeBridge - AI Marketing Agents"
+  description="Experience the future of influencer marketing with autonomous AI agents. Our advanced AI technology handles everything from creator discovery to campaign optimization."
+>
+  <Navbar client:load />
+  <AIHero client:load />
+  <AIFeatures1 client:load />
+  <AIFeaturesDiagonal client:load />
+  <Brands client:load />
+  <FAQ client:load /> 
+  <Footer />
+  <ScrollUpButton client:load />
+</Layout>
