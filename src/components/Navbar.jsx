@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { HypeBridgeLogo } from "../assets/logos/HypeBridgeLogo";
+import { InvitationModal } from "./InvitationModal";
 
 const navbarLinks = [
   { label: "Features", href: "/#features", ariaLabel: "Features" },
@@ -10,9 +12,10 @@ const navbarLinks = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const mobileMenuRef = useRef(null); // Ref for the mobile menu
   const toggleButtonRef = useRef(null); // Ref for the toggle button
+  const [modalRoot, setModalRoot] = useState(null);
 
   // Close the menu when clicking outside
   useEffect(() => {
@@ -39,6 +42,10 @@ export const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    setModalRoot(document.getElementById('modal-root'));
+  }, []);
 
   return (
     <nav className="w-4/5 h-50 p-4 flex flex-col justify-center items-center fixed top-5 left-1/2 transform -translate-x-1/2 z-40 rounded-full bg-bgDarkTransparentLighter backdrop-blur-xl shadow-2xl">
@@ -83,8 +90,8 @@ export const Navbar = () => {
               </a>
             ))}
             <button
-              onClick={() => setIsDemoModalOpen(true)}
-              className="ml-8 px-6 py-2 bg-gradient-to-r from-primaryColor to-secondaryColor text-white font-bold rounded-lg hover:scale-105 transition"
+              onClick={() => setIsModalOpen(true)}
+              className="ml-8 px-6 py-2.5 bg-gradient-to-r from-primaryColor/60 to-secondaryColor/60 backdrop-blur-md text-white font-bold rounded-xl hover:from-primaryColor/80 hover:to-secondaryColor/80 transition-all duration-300 shadow-lg hover:shadow-primaryColor/20"
               aria-label="Get Early Access"
             >
               Get Early Access
@@ -128,16 +135,24 @@ export const Navbar = () => {
             ))}
             <button
               onClick={() => {
-                setIsDemoModalOpen(true);
+                setIsModalOpen(true);
                 setIsOpen(false);
               }}
-              className="mt-4 px-6 py-2 bg-gradient-to-r from-primaryColor to-secondaryColor text-white font-bold rounded-lg hover:scale-105 transition"
+              className="mt-4 px-6 py-2.5 bg-gradient-to-r from-primaryColor/60 to-secondaryColor/60 backdrop-blur-md text-white font-bold rounded-xl hover:from-primaryColor/80 hover:to-secondaryColor/80 transition-all duration-300 shadow-lg hover:shadow-primaryColor/20"
               aria-label="Get Early Access"
             >
               Get Early Access
             </button>
           </div>
         </motion.div>
+      )}
+
+      {/* Modal Portal */}
+      {isModalOpen && modalRoot && createPortal(
+        <div className="fixed inset-0 z-[100] flex items-center justify-center min-h-screen p-4">
+          <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+        </div>,
+        modalRoot
       )}
     </nav>
   );

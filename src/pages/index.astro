@@ -7,24 +7,35 @@ import { Footer } from '../components/Footer.jsx'
 import { Hero } from '../components/Hero.jsx'
 import { Navbar } from '../components/Navbar.jsx'
 import { ScrollUpButton } from '../components/ScrollUpButton'
+import { InvitationModal } from '../components/InvitationModal.jsx'
 import Layout from '../layouts/Layout.astro'
 import '../styles/Diagonals.css'
 import '../styles/Theme.css'
 ---
 
 <Layout title="HypeBridge">
-  <Navbar client:load />
-  <Hero client:load />
-  <Features1 client:load />
-  <!-- <Features2 client:load /> -->
-  <FeaturesDiagonal client:load />
-  <!-- <Pricing client:load /> -->
-  <Brands client:load />
-  <!-- <Testimonials client:load /> -->
-  <!-- <Blog client:load /> -->
-  <FAQ client:load /> 
-  <Footer />
-  <ScrollUpButton client:load />
+  <div class="relative">
+    <Navbar client:load />
+    <Hero client:load />
+    <Features1 client:load />
+    <!-- <Features2 client:load /> -->
+    <FeaturesDiagonal client:load />
+    <!-- <Pricing client:load /> -->
+    <Brands client:load />
+    <!-- <Testimonials client:load /> -->
+    <!-- <Blog client:load /> -->
+    <FAQ client:load /> 
+    <Footer />
+    <ScrollUpButton client:load />
+    <div id="modal-root"></div>
+  </div>
 </Layout>
 
-
+<script>
+  let modalRoot = document.getElementById('modal-root');
+  if (!modalRoot) {
+    modalRoot = document.createElement('div');
+    modalRoot.id = 'modal-root';
+    document.body.appendChild(modalRoot);
+  }
+</script>

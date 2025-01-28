@@ -7,19 +7,28 @@ import { HypeBridgeLogo } from "../assets/logos/HypeBridgeLogo";
 export const InvitationModal = ({ setIsOpen }) => (
   <AnimatePresence>
     <motion.div
-      initial={{ opacity: 0, zIndex: 50 }}
-      animate={{ opacity: 1, zIndex: 50 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 0.1 }}
       exit={{ opacity: 0 }}
+      className="fixed inset-0 z-[100]"
     >
       <div
-        className="w-full h-full  bg-bgDarkTransparentDarker fixed top-0 left-0 flex  z-50 justify-center items-center"
+        className="w-full h-full bg-bgDarkTransparentDarker backdrop-blur-sm flex justify-center items-center"
         onClick={() => setIsOpen(false)}
       >
         <div
-          className="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-bgDarkTransparentLighter main-border-gray-darker py-12 px-8 sm:px-16 backdrop-blur-xl fixed sm:mb-8 fixed mx-auto z-50"
+          className="w-full h-screen sm:h-auto sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] sm:rounded-2xl bg-bgDarkTransparentLighter backdrop-blur-xl py-12 px-8 sm:px-16 relative sm:mb-8 mx-auto"
           onClick={(e) => e.stopPropagation()}
         >
+          {/* Close button */}
+          <button
+            className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close modal"
+          >
+            <CloseIcon />
+          </button>
           <div className="flex relative">
             <div className="w-1/2 hidden lg:inline">
               <h2 className="mt-6 mb-2 text-5xl font-bold tracking-normal text-primaryText">
@@ -88,12 +97,6 @@ export const InvitationModal = ({ setIsOpen }) => (
                 </form>
 
               </div>
-            </div>
-            <div
-              className="fixed top-6 right-6 z-50 w-5 h-5 cursor-pointer text-[rgb(255,255,255,0.7)] hover:text-white transition"
-              onClick={() => setIsOpen(false)}
-            >
-              <CloseIcon />
             </div>
           </div>
         </div>
